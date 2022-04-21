@@ -54,12 +54,6 @@ public class MissileLauncher : MonoBehaviour
             MeshRenderer targetHit = targetCube.GetComponent<MeshRenderer>();
             targetHit.enabled = true;
 
-            // Firing missile
-
-            GameObject missile = Instantiate(projectile, transform.position, transform.rotation);
-            missile.GetComponent<Rigidbody>().isKinematic = false;
-            missile.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0, upwardVelocity, forwardVelocity));
-
         }
         else
         {
